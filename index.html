@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore-compat.js"></script>
+    <script src="firebase.js"></script>
+</head>
+<body>
+    <div class="background-image">
+        <img src="./assets/bg-desktop-dark.jpg" alt="">
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="title">
+                TODO
+            </div>
+            <div class="theme">
+                <img src="./assets/icon-sun.svg" alt="">
+            </div>
+        </div>
+
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+
+                </div>
+            </div>
+            <div class="new-todo-input">
+                <form action="" onsubmit="addItem(event)">
+                    <input id="todo-input" type="text" placeholder="Create a new todo...">
+                </form>
+            </div>
+        </div>
+
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+
+                <!-- <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="assets/icon-check.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="todo-text">
+                        Complete online JavaScript course
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="assets/icon-check.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="todo-text">
+                        Complete online JavaScript course
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="assets/icon-check.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="todo-text">
+                        Complete online JavaScript course
+                    </div>
+                </div> -->
+            </div>
+            <div class="todo-items-info">
+                <div class="items-left">
+                    5 items left
+                </div>
+                <div class="items-statuses">
+                    <span id="all" class="active">All</span>
+                    <span id="active" >Active</span>
+                    <span id="completed">Completed</span>
+                </div>
+                <div id="clear" class="items-clear">
+                    Clear Completed
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" ></script>
+</body>
+</html>
